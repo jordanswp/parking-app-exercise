@@ -1,11 +1,11 @@
-#Zendesk Parking App Exercise
+# Zendesk Parking App Exercise
 
-##A command line parking system app written with Python.
+## A command line parking system app written with Python.
 
-##Requirements:
+## Requirements:
 Python 3.8.4
 
-##Running the app:
+## Running the app:
 
 Run the file via command line and upload file when prompted.
 
