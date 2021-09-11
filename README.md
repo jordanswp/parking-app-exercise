@@ -3,7 +3,7 @@
 ## A command line parking system app written with Python.
 
 ## Requirements:
-Python 3.8.4
+- Python 3.8.4
 
 ## Running the app:
 
@@ -67,11 +67,13 @@ And upon a vehicle leaving, the respective lot will be vacated and the parking f
 
 When a particular parking lot is full, vehicles would be rejected from entering the car park. 
 
+```
 Output:
->Accept MotorcycleLot1
->Accept CarLot1
->MotorcycleLot1 2
->Accept CarLot2
->Accept CarLot3
->Reject
->CarLot3 6
+Accept MotorcycleLot1
+Accept CarLot1
+MotorcycleLot1 2
+Accept CarLot2
+Accept CarLot3
+Reject
+CarLot3 6
+```
