@@ -4,8 +4,6 @@ import math
 import sys
 import os
 
-# in readme file, brief desaription of how the dictionary is structured, write down what empty, empty is.
-
 def upload_file():
     root = tk.Tk()
     root.withdraw()
