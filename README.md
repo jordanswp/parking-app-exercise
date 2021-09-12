@@ -7,7 +7,9 @@
 
 ## Running the app:
 
-Run the file via command line and upload file when prompted.
+Run the file via command line and upload file when prompted:
+1. Valid file: ./upload_file/valid_input/valid_input.txt
+2. Invalid files: ./upload_file/invalid_input/{select file}
 
 ```
 python3 parking-app.py

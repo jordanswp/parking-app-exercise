@@ -154,6 +154,19 @@ def vehicle_enter(line):
         print('Invalid vehicle type. Please check file contents and try again.')
         # break
     
+def calculate_car_price(timestamp, exit_timestamp, car_price, lot_num):
+        total_mins_parked = (int(timestamp) - int(exit_timestamp))/60
+        total_hours_parked = math.ceil( total_mins_parked / 60 )
+        total_cost = ( total_hours_parked * car_price )
+        print("{} {}".format(lot_num, total_cost))
+
+def calculate_motorcycle_price(timestamp, exit_timestamp, motorcycle_price, lot_num):
+        total_mins_parked = (int(timestamp) - int(exit_timestamp))/60
+        total_hours_parked = math.ceil( total_mins_parked / 60 )
+        total_cost = ( total_hours_parked * motorcycle_price )
+        print("{} {}".format(lot_num, total_cost))
+
+
 def vehicle_exit(line):
 
     _data = line.split()
@@ -176,16 +189,14 @@ def vehicle_exit(line):
         for lot_num, details in car_lot.items():
             #if exiting number plate matches a record in car lots
             if details[0] ==  num_plate:
+                exit_timestamp = details[1]
 
                 #free up lot
                 car_lot[lot_num] = ["empty", "empty"]
 
                 #calculate price
                 try:
-                    total_mins_parked = (int(timestamp) - int(details[1]))/60
-                    total_hours_parked = math.ceil( total_mins_parked / 60 )
-                    total_cost = ( total_hours_parked * car_price )
-                    print("{} {}".format(lot_num, total_cost))
+                    calculate_car_price(timestamp, exit_timestamp, car_price, lot_num)
                 except ValueError:
                     print('Invalid timestamp detected. Please check file contents and try again.')
                 break
@@ -195,16 +206,14 @@ def vehicle_exit(line):
         for lot_num, details in motorcycle_lot.items():
             #if exiting number plate matches a record in motorcycle lots
             if details[0] ==  num_plate:
+                exit_timestamp = details[1]
 
                 #free up lot
                 motorcycle_lot[lot_num] = ["empty", "empty"]
 
                 #calculate price
                 try:
-                    total_mins_parked = (int(timestamp) - int(details[1]))/60
-                    total_hours_parked = math.ceil( total_mins_parked / 60 )
-                    total_cost = ( total_hours_parked * motorcycle_price )
-                    print("{} {}".format(lot_num, total_cost))
+                    calculate_motorcycle_price(timestamp, exit_timestamp, car_price, lot_num)
                 except ValueError:
                     print('Invalid timestamp detected. Please check file contents and try again.')
                 break
