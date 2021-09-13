@@ -13,6 +13,12 @@ def upload_file():
     #upload only .txt files
     uploaded_file = filedialog.askopenfilename(filetypes=[("TXT files", "*.txt")])
 
+    #additional check to ensure only .txt files may be uploaded
+    if not uploaded_file.endswith(".txt"):
+        print("Incorrect fie format detected. Only .txt files may be uploaded.")
+        sys.exit()
+
+
     try:
         f = open(uploaded_file, "r")
     except FileNotFoundError:
