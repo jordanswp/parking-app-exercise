@@ -3,7 +3,7 @@
 ## A command line parking system app written with Python.
 
 ## Requirements:
-- Python 3.8.4
+- Python 3.8.4 or above
 
 ## Running the app:
 
@@ -12,7 +12,7 @@ Run the file via command line and upload file when prompted:
 2. Invalid files: ./upload_file/invalid_input/{select file}
 
 ```
-python3 parking-app.py
+python parking-app.py
 ```
 
 Input:
