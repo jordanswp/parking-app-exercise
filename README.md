@@ -65,7 +65,7 @@ car_park = {
 }
 ```
 
-And upon a vehicle leaving, the respective lot will be vacated and the parking fee would be calculated.
+And upon a vehicle leaving, the respective lot will be vacated and the parking fee would be calculated, with the parking fee being $2/hr and $1/hr for cars and motorcycles respectively. The parking fee will be rounded up to the nearest dollar.
 
 When a particular parking lot is full, vehicles would be rejected from entering the car park. 
 
@@ -79,3 +79,10 @@ Accept CarLot3
 Reject
 CarLot3 6
 ```
+
+## Error handling
+Assuming the structure of the input file is as mentioned above and that the input file has is in .txt format, the application has been designed to throw an error when the input file is erroneous. Such cases include:
+1. Extension of input file is not .txt
+2. Input file is empty
+3. Spelling error and/or invalid inputs
+4. Missing information
