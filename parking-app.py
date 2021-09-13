@@ -211,7 +211,7 @@ def vehicle_exit(line):
 
                 #calculate price
                 try:
-                    calculate_motorcycle_price(timestamp, exit_timestamp, car_price, lot_num)
+                    calculate_motorcycle_price(timestamp, exit_timestamp, motorcycle_price, lot_num)
                 except ValueError:
                     print('Invalid timestamp detected. Please check file contents and try again.')
                 break
